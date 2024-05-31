@@ -44,7 +44,11 @@ function moveShooter(e) {
     case "ArrowLeft":
       if (currShooterIndex % width !== 0) currShooterIndex -= 1;
       break;
+    case "ArrowRight":
+      currShooterIndex += 1;
+      break;
   }
   squares[currShooterIndex].classList.add("shooter");
+  e.preventDefault(); //stops default function of the keys which is to move the window
 }
 document.addEventListener("keydown", moveShooter);
