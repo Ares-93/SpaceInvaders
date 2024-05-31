@@ -4,7 +4,7 @@ const resultDisplay = document.querySelector(".results");
 let currShooterIndex = 202; //where the shooter will spawn
 const width = 15;
 const aliensRemoved = [];
-let invaedersId = [];
+let invadersId = [];
 let isGoingRight = true;
 let direction = 1;
 
@@ -87,6 +87,11 @@ function moveInvaders() {
 
   if (squares[currShooterIndex].classList.contains("invader")) {
     resultDisplay.innerHTML = "GAME OVER!";
+  }
+
+  if (aliensRemoved.length === alienInvaders.length) {
+    resultDisplay.innerHTML = "YOU WIN";
+    clearInterval(invadersId);
   }
 }
 
