@@ -14,7 +14,6 @@ for (
   i++ //loops 225 times (15*15=225)
 ) {
   const square = document.createElement("div");
-  square.id = i;
   grid.appendChild(square);
 }
 
@@ -95,4 +94,22 @@ function moveInvaders() {
   }
 }
 
-invaedersId = setInterval(moveInvaders, 600);
+invadersId = setInterval(moveInvaders, 600);
+
+function shoot(e) {
+  let laserId;
+  let currentLaserIndex = currShooterIndex;
+
+  function moveLaser() {
+    squares[currentLaserIndex].classList.remove("laser");
+    currentLaserIndex -= width;
+    squares[currentLaserIndex].classList.add("laser");
+  }
+  switch (e.key) {
+    case " ":
+      laserId = setInterval(moveLaser, 100);
+      break;
+  }
+}
+
+document.addEventListener("keydown", shoot);
