@@ -125,7 +125,7 @@ function shoot(e) {
     }
   }
   if (e.key === " ") {
-    setInterval(moveLaser, 100);
+    laserId = setInterval(moveLaser, 100);
   }
 }
 
