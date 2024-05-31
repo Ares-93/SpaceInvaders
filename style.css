@@ -13,3 +13,17 @@
 
   box-sizing: border-box;
 }
+
+.invader {
+  background-color: crimson;
+  border-radius: 20px;
+}
+
+.shooter{
+  background-color: black;
+
+}
+
+.laser{
+  blue;
+}
