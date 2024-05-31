@@ -7,6 +7,8 @@ const width = 15;
 
 const aliensRemoved = [];
 
+let invaedersId = [];
+
 for (
   let i = 0;
   i < width * width;
@@ -38,6 +40,12 @@ draw();
 
 squares[currShooterIndex].classList.add("shooter");
 
+function remove() {
+  for (let i = 0; i < alienInvaders.length; i++) {
+    squares[alienInvaders[i]].classList.remove("invader");
+  }
+}
+
 function moveShooter(e) {
   squares[currShooterIndex].classList.remove("shooter");
   switch (e.key) {
@@ -55,5 +63,13 @@ document.addEventListener("keydown", moveShooter);
 
 function moveInvaders() {
   const leftEdge = alienInvaders[0] % width === 0;
+  const rightEdge =
+    alienInvaders[alienInvaders.length - 1] % width === width - 1;
+  remove();
+
+  for (let i = 0; i < alienInvaders.length; i++) {
+    alienInvaders[i] += 1;
+  }
+  draw();
 }
-const rightEdge = alienInvaders[alienInvaders.length - 1] % width === width - 1;
+invaedersId = setInterval(moveInvaders, 600);
