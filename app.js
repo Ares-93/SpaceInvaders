@@ -13,6 +13,7 @@ for (
   i++ //loops 225 times (15*15=225)
 ) {
   const square = document.createElement("div");
+  square.id = i;
   grid.appendChild(square);
 }
 
@@ -36,3 +37,14 @@ function draw() {
 draw();
 
 squares[currShooterIndex].classList.add("shooter");
+
+function moveShooter(e) {
+  squares[currShooterIndex].classList.remove("shooter");
+  switch (e.key) {
+    case "ArrowLeft":
+      if (currShooterIndex % width !== 0) currShooterIndex -= 1;
+      break;
+  }
+  squares[currShooterIndex].classList.add("shooter");
+}
+document.addEventListener("keydown", moveShooter);
