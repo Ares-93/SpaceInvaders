@@ -52,3 +52,8 @@ function moveShooter(e) {
   e.preventDefault(); //stops default function of the keys which is to move the window
 }
 document.addEventListener("keydown", moveShooter);
+
+function moveInvaders() {
+  const leftEdge = alienInvaders[0] % width === 0;
+}
+const rightEdge = alienInvaders[alienInvaders.length - 1] % width === width - 1;
