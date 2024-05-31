@@ -2,12 +2,11 @@ const grid = document.querySelector(".grid");
 const resultDisplay = document.querySelector(".results");
 
 let currShooterIndex = 202; //where the shooter will spawn
-
 const width = 15;
-
 const aliensRemoved = [];
-
 let invaedersId = [];
+let isGoingRight = true;
+let direction = 1;
 
 for (
   let i = 0;
@@ -67,9 +66,21 @@ function moveInvaders() {
     alienInvaders[alienInvaders.length - 1] % width === width - 1;
   remove();
 
+  if (rightEdge && isGoingRight) {
+    for (let i = 0; i < alienInvaders.length; i++) {
+      alienInvaders[i] += width + 1;
+      direction = -1;
+      isGoingRight = false;
+    }
+  }
+
   for (let i = 0; i < alienInvaders.length; i++) {
-    alienInvaders[i] += 1;
+    alienInvaders += direction;
   }
   draw();
+
+  if (squares[currShooterIndex].classList.contains("invader")) {
+    resultDisplay.innerHTML = "GAME OVER!";
+  }
 }
 invaedersId = setInterval(moveInvaders, 600);
