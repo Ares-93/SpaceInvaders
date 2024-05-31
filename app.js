@@ -1,7 +1,11 @@
 const grid = document.querySelector(".grid");
 const resultDisplay = document.querySelector(".results");
 
+let currShooterIndex = 202; //where the shooter will spawn
+
 const width = 15;
+
+const aliensRemoved = [];
 
 for (
   let i = 0;
@@ -30,3 +34,5 @@ function draw() {
 }
 
 draw();
+
+squares[currShooterIndex].classList.add("shooter");
