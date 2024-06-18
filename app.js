@@ -9,6 +9,10 @@ let isGoingRight = true;
 let direction = 1;
 let results = 0;
 
+//sound effects
+const laserNoise = new Audio("audio/laser.mp3");
+const hit = new Audio("audio/hit.mp3");
+
 for (
   let i = 0;
   i < width * width;
@@ -125,6 +129,8 @@ function shoot(e) {
     }
   }
   if (e.key === " ") {
+    laserNoise.currentTime = 0;
+    laserNoise.play();
     laserId = setInterval(moveLaser, 100);
   }
 }
