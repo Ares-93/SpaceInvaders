@@ -12,6 +12,8 @@ let results = 0;
 //sound effects
 const laserNoise = new Audio("audio/laser.mp3");
 const hit = new Audio("audio/hit.mp3");
+const win = new Audio("audio/win.mp3");
+const lose = new Audio("audio/lose.mp3");
 
 for (
   let i = 0;
@@ -91,10 +93,12 @@ function moveInvaders() {
 
   if (squares[currShooterIndex].classList.contains("invader")) {
     resultDisplay.innerHTML = "GAME OVER!";
+    lose.play();
   }
 
   if (aliensRemoved.length === alienInvaders.length) {
     resultDisplay.innerHTML = "YOU WIN";
+    win.play();
     clearInterval(invadersId);
   }
 }
@@ -114,6 +118,8 @@ function shoot(e) {
       squares[currentLaserIndex].classList.remove("laser");
       squares[currentLaserIndex].classList.remove("invader");
       squares[currentLaserIndex].classList.add("boom");
+      hit.currentTime = 0;
+      hit.play();
 
       setTimeout(
         () => squares[currentLaserIndex].classList.remove("boom"),
