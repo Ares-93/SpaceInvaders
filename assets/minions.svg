@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Head -->
+  <path d="M100 20 Q80 60, 100 80 Q120 60, 100 20" fill="#6a0dad" stroke="#000" stroke-width="2"/>
+  <!-- Ears -->
+  <path d="M60 20 Q70 40, 50 60" fill="#6a0dad" stroke="#000" stroke-width="2"/>
+  <path d="M140 20 Q130 40, 150 60" fill="#6a0dad" stroke="#000" stroke-width="2"/>
+  <!-- Eyes -->
+  <ellipse cx="80" cy="50" rx="10" ry="15" fill="#db1e0d"/>
+  <ellipse cx="120" cy="50" rx="10" ry="15" fill="#db1e0d"/>
+  <!-- Mouth -->
+  <path d="M80 80 Q100 100, 120 80" stroke="#000" stroke-width="2" fill="none"/>
+  <!-- Teeth -->
+  <polygon points="90,85 95,95 100,85 105,95 110,85" fill="#FFD700" stroke="#000" stroke-width="2"/>
+</svg>

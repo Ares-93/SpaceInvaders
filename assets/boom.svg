@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Outer explosion -->
+  <circle cx="100" cy="100" r="10" fill="orange">
+    <animate attributeName="r" from="10" to="50" dur="0.5s" begin="click" fill="freeze"/>
+    <animate attributeName="opacity" from="1" to="0" dur="0.5s" begin="click" fill="freeze"/>
+  </circle>
+  <!-- Inner explosion -->
+  <circle cx="100" cy="100" r="5" fill="yellow">
+    <animate attributeName="r" from="5" to="25" dur="0.5s" begin="click" fill="freeze"/>
+    <animate attributeName="opacity" from="1" to="0" dur="0.5s" begin="click" fill="freeze"/>
+  </circle>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Body -->
+  <rect x="80" y="20" width="40" height="100" fill="gray" stroke="black" stroke-width="2"/>
+  <!-- Nose -->
+  <polygon points="80,20 100,0 120,20" fill="red" stroke="black" stroke-width="2"/>
+  <!-- Fins -->
+  <polygon points="80,120 60,140 80,140" fill="gray" stroke="black" stroke-width="2"/>
+  <polygon points="120,120 140,140 120,140" fill="gray" stroke="black" stroke-width="2"/>
+  <polygon points="80,140 100,160 120,140" fill="gray" stroke="black" stroke-width="2"/>
+</svg>

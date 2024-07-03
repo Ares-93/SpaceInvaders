@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Body -->
+  <polygon points="100,10 150,50 140,90 60,90 50,50" fill="#000000" stroke="#000" stroke-width="2"/>
+  <!-- Cockpit -->
+  <polygon points="90,20 110,20 105,50 95,50" fill="#003366" stroke="#000" stroke-width="1"/>
+  <!-- Red highlights -->
+  <polygon points="100,10 120,35 80,35" fill="#FF0000" stroke="#000" stroke-width="1"/>
+  <polygon points="140,50 130,65 70,65 60,50" fill="#FF0000" stroke="#000" stroke-width="1"/>
+  <!-- Wings -->
+  <polygon points="50,50 20,100 80,70" fill="#000000" stroke="#000" stroke-width="2"/>
+  <polygon points="150,50 180,100 120,70" fill="#000000" stroke="#000" stroke-width="2"/>
+  <!-- Tail fins -->
+  <polygon points="80,90 100,120 120,90" fill="#000000" stroke="#000" stroke-width="2"/>
+  <!-- Jet engines -->
+  <ellipse cx="70" cy="120" rx="10" ry="20" fill="#000000" stroke="#000" stroke-width="2"/>
+  <ellipse cx="130" cy="120" rx="10" ry="20" fill="#000000" stroke="#000" stroke-width="2"/>
+  <!-- Engine flames -->
+  <polygon points="70,140 65,160 75,160" fill="#FF4500" stroke="#000" stroke-width="1"/>
+  <polygon points="130,140 125,160 135,160" fill="#FF4500" stroke="#000" stroke-width="1"/>
+</svg>
